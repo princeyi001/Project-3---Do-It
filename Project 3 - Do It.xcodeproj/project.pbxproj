@@ -13,6 +13,8 @@
 		87D5F23D1F62274500A97C19 /* Project_3___Do_It.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87D5F23B1F62274500A97C19 /* Project_3___Do_It.xcdatamodeld */; };
 		87D5F23F1F62274500A97C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87D5F23E1F62274500A97C19 /* Assets.xcassets */; };
 		87D5F2421F62274500A97C19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87D5F2401F62274500A97C19 /* LaunchScreen.storyboard */; };
+		87D5F24A1F62514600A97C19 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5F2491F62514600A97C19 /* File.swift */; };
+		87D5F24C1F62581700A97C19 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D5F24B1F62581700A97C19 /* CreateTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		87D5F23E1F62274500A97C19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87D5F2411F62274500A97C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87D5F2431F62274500A97C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87D5F2491F62514600A97C19 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		87D5F24B1F62581700A97C19 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				87D5F2341F62274500A97C19 /* AppDelegate.swift */,
 				87D5F2361F62274500A97C19 /* ViewController.swift */,
 				87D5F2381F62274500A97C19 /* Main.storyboard */,
+				87D5F24B1F62581700A97C19 /* CreateTaskViewController.swift */,
+				87D5F2491F62514600A97C19 /* File.swift */,
 				87D5F23E1F62274500A97C19 /* Assets.xcassets */,
 				87D5F2401F62274500A97C19 /* LaunchScreen.storyboard */,
 				87D5F2431F62274500A97C19 /* Info.plist */,
@@ -140,8 +146,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				87D5F23D1F62274500A97C19 /* Project_3___Do_It.xcdatamodeld in Sources */,
+				87D5F24A1F62514600A97C19 /* File.swift in Sources */,
 				87D5F2371F62274500A97C19 /* ViewController.swift in Sources */,
 				87D5F2351F62274500A97C19 /* AppDelegate.swift in Sources */,
+				87D5F24C1F62581700A97C19 /* CreateTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
