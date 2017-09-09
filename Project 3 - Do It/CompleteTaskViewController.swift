@@ -12,6 +12,8 @@ class CompleteTaskViewController: UIViewController {
 
     @IBOutlet weak var taskLabel: UILabel!
     
+    @IBOutlet weak var importantSwitch: UISwitch!
+    
     var task = Task()
     
     var previousVC = ViewController()
@@ -22,11 +24,20 @@ class CompleteTaskViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         taskLabel.text = task.name
+        
+        if task.important == true {
+           importantSwitch.setOn(true, animated: false)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func importantSwitched(_ sender: Any) {
+        task.important = importantSwitch.isOn
+        previousVC.tableView.reloadData()
     }
     
     @IBAction func completeTapped(_ sender: Any) {

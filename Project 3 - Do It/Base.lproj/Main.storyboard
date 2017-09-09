@@ -72,22 +72,39 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viG-jz-h1T">
-                                <rect key="frame" x="154" y="139" width="67" height="30"/>
+                                <rect key="frame" x="154" y="246" width="67" height="30"/>
                                 <state key="normal" title="Complete"/>
                                 <connections>
                                     <action selector="completeTapped:" destination="sQa-VC-kYB" eventType="touchUpInside" id="Lun-Jv-w8C"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOy-EO-rlq">
+                                <rect key="frame" x="150" y="144" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E44-o7-9Ua">
+                                <rect key="frame" x="163" y="185" width="51" height="31"/>
+                                <connections>
+                                    <action selector="importantSwitched:" destination="sQa-VC-kYB" eventType="valueChanged" id="QDk-BC-UHe"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9aT-Tt-HaZ" firstAttribute="centerX" secondItem="7oL-pH-NJz" secondAttribute="centerX" id="2Su-mR-esF"/>
-                            <constraint firstItem="viG-jz-h1T" firstAttribute="centerX" secondItem="7oL-pH-NJz" secondAttribute="centerX" id="Awa-K1-Zxb"/>
-                            <constraint firstItem="viG-jz-h1T" firstAttribute="top" secondItem="9aT-Tt-HaZ" secondAttribute="bottom" constant="25" id="bby-GC-uOT"/>
+                            <constraint firstItem="viG-jz-h1T" firstAttribute="top" secondItem="E44-o7-9Ua" secondAttribute="bottom" constant="30" id="96P-OQ-2kg"/>
+                            <constraint firstItem="gOy-EO-rlq" firstAttribute="centerX" secondItem="7oL-pH-NJz" secondAttribute="centerX" id="Iht-Tq-wv3"/>
+                            <constraint firstItem="E44-o7-9Ua" firstAttribute="centerX" secondItem="7oL-pH-NJz" secondAttribute="centerX" id="SzP-f2-viE"/>
+                            <constraint firstItem="viG-jz-h1T" firstAttribute="centerX" secondItem="7oL-pH-NJz" secondAttribute="centerX" id="cRh-wP-sdm"/>
+                            <constraint firstItem="E44-o7-9Ua" firstAttribute="top" secondItem="gOy-EO-rlq" secondAttribute="bottom" constant="20" id="ewH-ll-OsL"/>
                             <constraint firstItem="9aT-Tt-HaZ" firstAttribute="top" secondItem="dQI-hL-CVd" secondAttribute="bottom" constant="20" id="n5N-aN-vgh"/>
+                            <constraint firstItem="gOy-EO-rlq" firstAttribute="top" secondItem="9aT-Tt-HaZ" secondAttribute="bottom" constant="30" id="nLW-PE-FCC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="importantSwitch" destination="E44-o7-9Ua" id="p56-z4-rcy"/>
                         <outlet property="taskLabel" destination="9aT-Tt-HaZ" id="OUc-O3-J0f"/>
                     </connections>
                 </viewController>
