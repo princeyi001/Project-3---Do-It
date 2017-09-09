@@ -14,18 +14,16 @@ class CompleteTaskViewController: UIViewController {
     
     @IBOutlet weak var importantSwitch: UISwitch!
     
-    var task = Task()
-    
-    var previousVC = ViewController()
+    var task : Task? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        taskLabel.text = task.name
+        taskLabel.text = task!.name
         
-        if task.important == true {
+        if task!.important == true {
            importantSwitch.setOn(true, animated: false)
         }
     }
@@ -36,13 +34,16 @@ class CompleteTaskViewController: UIViewController {
     }
     
     @IBAction func importantSwitched(_ sender: Any) {
-        task.important = importantSwitch.isOn
-        previousVC.tableView.reloadData()
+        task!.important = importantSwitch.isOn
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
     }
     
     @IBAction func completeTapped(_ sender: Any) {
-        previousVC.tasks.remove(at : previousVC.selectedIndex)
-        previousVC.tableView.reloadData()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        context.delete(task!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
         navigationController!.popViewController(animated: true)
     }
 
