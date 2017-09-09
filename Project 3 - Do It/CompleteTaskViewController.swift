@@ -1,18 +1,18 @@
 //
-//  CreateTaskViewController.swift
+//  CompleteTaskViewController.swift
 //  Project 3 - Do It
 //
-//  Created by Dong Hun Yi on 9/8/17.
+//  Created by Dong Hun Yi on 9/9/17.
 //  Copyright © 2017 PrinceYiCoding. All rights reserved.
 //
 
 import UIKit
 
-class CreateTaskViewController: UIViewController {
+class CompleteTaskViewController: UIViewController {
+
+    @IBOutlet weak var taskLabel: UILabel!
     
-    @IBOutlet weak var taskTextField: UITextField!
-    
-    @IBOutlet weak var importantSwitch: UISwitch!
+    var task = Task()
     
     var previousVC = ViewController()
     
@@ -20,6 +20,8 @@ class CreateTaskViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        taskLabel.text = task.name
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,14 +29,8 @@ class CreateTaskViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func taskAddButton(_ sender: Any) {
-        //Create a task from the outlet information
-        let task = Task()
-        task.name = taskTextField.text!
-        task.important = importantSwitch.isOn
-        
-        //Add new task to array in previous ViewController
-        previousVC.tasks.append(task)
+    @IBAction func completeTapped(_ sender: Any) {
+        previousVC.tasks.remove(at : previousVC.selectedIndex)
         previousVC.tableView.reloadData()
         navigationController!.popViewController(animated: true)
     }

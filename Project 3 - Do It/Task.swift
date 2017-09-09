@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  Task.swift
 //  Project 3 - Do It
 //
 //  Created by Dong Hun Yi on 9/8/17.
